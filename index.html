@@ -2544,7 +2544,7 @@ var pm=document.querySelector('#s-cojup-promo .snd');
 if(pm){pm.addEventListener('click',function(e){e.stopPropagation();var v=pm.parentNode.querySelector('video');v.muted=!v.muted;pm.textContent=v.muted?'소리 켜기':'소리 끄기';play(v);});}
 /* 피클 유튜브 구간 */
 var yt=document.querySelector('#s-pickle .pkv');var cur={s:200,e:229};
-function ysrc(){return 'https://www.youtube-nocookie.com/embed/'+yt.dataset.yt+'?start='+cur.s+'&end='+cur.e+'&autoplay=1&mute=1&rel=0&playsinline=1&modestbranding=1';}
+function ysrc(){return 'https://www.youtube.com/embed/'+yt.dataset.yt+'?start='+cur.s+'&end='+cur.e+'&autoplay=1&mute=1&rel=0&playsinline=1&modestbranding=1';}
 if(yt){[].forEach.call(document.querySelectorAll('#s-pickle .y'),function(b){b.addEventListener('click',function(e){e.stopPropagation();[].forEach.call(document.querySelectorAll('#s-pickle .y'),function(x){x.classList.remove('on');});b.classList.add('on');cur={s:+b.dataset.s,e:+b.dataset.e};yt.querySelector('iframe').src=ysrc();});});}
 /* 장 전환 시 재생·정지 */
 function sync(){[].forEach.call(document.querySelectorAll('.slide'),function(sl){var on=sl.classList.contains('active');
